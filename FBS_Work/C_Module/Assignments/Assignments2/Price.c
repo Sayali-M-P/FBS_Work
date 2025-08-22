@@ -8,7 +8,7 @@ int main(){
     scanf("%d", &price);
 
     printf("Are you a student? (y/n): ");
-    scanf(" %c", &isStudent);  // Space before %c is important
+    scanf(" %c", &isStudent);  
 
     if (isStudent == 'y') {
         if (price > 500) {
@@ -27,7 +27,8 @@ int main(){
     printf("Discount: %.2f\n", discount);
     printf("Final price: %.2f\n", price - discount);
 
-    return 0;
+
 }
+
 
 
