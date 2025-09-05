@@ -1,7 +1,13 @@
 #include<stdio.h>
-
+int traingle(); // function declaration here
 int main() {
-    int a, b, c;
+    traingle(); // function call here
+    return 0;
+} // main ends here
+
+int traingle(){
+	int a, b, c;
+	printf("Enter 3 sides");
     scanf("%d%d%d", &a, &b, &c);
 
     if (a + b > c && b + c > a && a + c > b) {
@@ -21,7 +27,5 @@ int main() {
     } else {
         printf("Not a valid triangle\n");
     }
-
-    return 0;
-}
-
+	return 0;
+} // function defination here
