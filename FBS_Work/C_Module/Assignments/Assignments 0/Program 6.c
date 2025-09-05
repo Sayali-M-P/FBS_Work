@@ -1,18 +1,26 @@
 #include<stdio.h>
-void cal();
+int square();
+int cube();// function declaration here
 
 void main(){
-	cal();
-
-}
-
-void cal(){
-	int num=10;
 	int sq,cub;
-	sq=num*num;
-	printf("Square is:%d\n",sq);
-	cub=num*num*num;
+	sq=square();
+	cub=cube();
+	printf("Square is:%d\n",sq); // function call here
 	printf("Cube is:%d\n",cub);
+} // main ends here
+
+int square(){
+	int num;
+	printf("Enter a number");
+	scanf("%d",&num);
+	return num*num; // function defination here
 }
 
+int cube(){
+	int num;
+	printf("Enter a number");
+	scanf("%d",&num);
+	return num*num*num;  // function defination here
+}
 
