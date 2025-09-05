@@ -1,13 +1,16 @@
 #include<stdio.h>
-void area(); // function declaration
+float area(); // function declaration
 void main(){
-	area(); //function call here
+	float a;
+	a=area(); //function call here
+	printf("%.2f",a);
 } //main ends here
 
-area(){
-		float rad,a;
-	printf("Enter a number");
+float area(){
+		float rad;
+	printf("Enter a radius");
 	scanf("%f",&rad);
-	a=3.14*rad*rad;
-	printf("%.2f",a);
+	return 3.14*rad*rad;
+	
 } //function defination here
+
