@@ -1,12 +1,14 @@
 #include<stdio.h>
-void average();
+int average(); // function declaration here
 void main(){
-	average();
-}
-
-void average(){
-	int m1=21,m2=12,m3=10,m4=30,m5=41;
 	int avg;
-	avg=(m1+m2+m3+m4+m5)/5;
+	avg=average(); // function call here 
 	printf("Average of 5 numbers is:%d",avg);
-}
+} // main ends here
+
+int average(){
+	int m1,m2,m3,m4,m5;
+	printf("Enter five numbers");
+	scanf("%d%d%d%d%d",&m1,&m2,&m3,&m4,&m5);
+	return (m1+m2+m3+m4+m5)/5;	
+} // function defination here
