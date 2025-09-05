@@ -1,6 +1,12 @@
 #include<stdio.h>
+int price(); // function declaration here 
 int main(){
-    int price;
+    price(); // function call here 
+    return 0;
+} // main ends here
+ 
+int price(){
+	int price;
     char isStudent;
     float discount;
 
@@ -26,9 +32,6 @@ int main(){
 
     printf("Discount: %.2f\n", discount);
     printf("Final price: %.2f\n", price - discount);
-
-
-}
-
-
+	return 0;
+} // function defination here
 
