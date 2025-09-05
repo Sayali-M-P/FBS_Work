@@ -1,14 +1,17 @@
 #include<stdio.h>
-void sum();
+int sum();
 void main(){
-	sum();
+	int result;
+	result=sum();
+	printf("Sum is:%d\n",result);
 }
 
-void sum(){
-	int no1,no2,result;
+int sum(){
+	int no1,no2;
 	printf("Enter a number");
 	scanf("%d%d",&no1,&no2);
-	result=no1+no2;
-	printf("%d",result);
+	return no1+no2;
+	
 }
+
 
