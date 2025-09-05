@@ -1,8 +1,16 @@
 #include<stdio.h>
-void main(){
+int arithmatic(); // function declaration here
+int main(){
+	arthmatic(); // function call here
+	return 0;
+} // main ends here
+
+int arthmatic(){
 	int x,y;
 	char op;
+	printf("Enter 2 numbers");
 	scanf("%d%d",&x,&y);
+	printf("Enter a operator");
 	scanf(" %c",&op);
 	if(op =='+'){
 		printf("Addition:%d", x+y);
@@ -31,5 +39,6 @@ void main(){
 	}
 	else{
 		printf("Invalid Error");
-	}
-}
+	} 
+} // function defination here
+
