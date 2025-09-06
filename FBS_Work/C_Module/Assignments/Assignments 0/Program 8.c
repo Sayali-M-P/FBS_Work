@@ -1,16 +1,16 @@
 #include<stdio.h>
-float Rect(); // function declaration here
+void Rect(float,float); // function declaration here
 void main(){
-	float perimeter;
-	perimeter=Rect(); // function call here
-	printf("perimeter of rectangle:%.2f\n",perimeter);
-} // main ends here
-
-float Rect(){
 	float length,width;
 	printf("Enter length");
 	scanf("%f",&length);
 	printf("Enter width");
 	scanf("%f",&width);
-	return 2*(length+width); // function defination here	
+	Rect(length,width); // function call here
+} // main ends here
+
+void Rect(float x,float y ){
+	
+	float perimeter=2*(x+y); // function defination here
+	printf("perimeter of rectangle:%.2f\n",perimeter);	
 }
