@@ -1,33 +1,25 @@
 #include <stdio.h>
-int total_min;
-
 // Function declarations
-int hou();   // Returns hours
-int mint();  // Returns remaining minutes
+void hou(int);   
+void mint(int);  
 
 int main() {
-    int hour, min;
-
-   
+	int total_min;
     printf("Enter total minutes: ");
     scanf("%d", &total_min);
 
     //  functions call here
-    hour = hou();
-    min = mint();
+	hou(total_min);
+    mint(total_min);
+    printf("Total Minutes: %d\n", total_min);   
+} // main ends here
 
-    // Output
-    printf("Total Minutes: %d\n", total_min);
-    printf("Hours: %d\n", hour);
-    printf("Minutes: %d\n", min);
-
-    return 0;
+void hou(int a ) {
+     int hour=a / 60;
+     printf("Hours: %d\n", hour);
 }
 
-int hou() {
-    return total_min / 60;
-}
-
-int mint() {
-    return total_min % 60;
-}
+void mint(int b) {
+    int min= b % 60;
+     printf("Minutes: %d\n", min);
+} // function defination here
