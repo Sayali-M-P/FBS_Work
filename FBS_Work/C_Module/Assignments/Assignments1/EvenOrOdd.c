@@ -1,20 +1,16 @@
 #include<stdio.h>
-int evenodd(); // function declaration here
+void evenodd(int); // function declaration here
 int main(){
-	int res=evenodd(); //function call here
-	if(res==1)
-		printf("No is Even");
-	else
-			printf("No is odd");
-} // main ends here
-
-int	evenodd(){
 		int num;
 		printf("Enter number");
 		scanf("%d",&num);
-	if(num%2==0)
-		return 1;
+	evenodd(num); //function call here
+} // main ends here
+
+void evenodd(int a){
+	if(a%2==0)
+		printf("Even");
 	else
-		return 0;
+		printf("odd");
 	
 } // function defination here 
