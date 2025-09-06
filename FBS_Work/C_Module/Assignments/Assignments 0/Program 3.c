@@ -1,14 +1,16 @@
-#include<stdio.h>
-float convert(); //function declaration here
-void main(){
-	float fah;
-	fah=convert();
-	printf(" %.2f",fah); //function call here
-} //main ends here 
+#include <stdio.h>
+void convert(double);  // Function declaration
 
-float convert(){
-	float cel;
-	printf("Enter temperature in Celsius:");
-	scanf("%f",&cel);
-	return (cel*9/5)+32;
-} //function defination here
+int main() {
+    double cel;
+    printf("Enter temperature in Celsius: ");
+    scanf("%lf", &cel);   
+    convert(cel); // function call here
+    return 0;
+}
+
+// Function definition
+void convert(double a) {
+    double result = (a * 9 / 5) + 32;
+    printf("Temperature in Fahrenheit: %.2lf\n", result);  
+}
