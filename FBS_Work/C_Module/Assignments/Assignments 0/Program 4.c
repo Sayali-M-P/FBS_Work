@@ -1,16 +1,16 @@
 #include<stdio.h>
-int swap(); // function declaration here 
+void swap(int,int); // function declaration here 
 int main(){
-	swap(); // function call here
-	return 0;
+	int a,b;
+	printf("Enter two numbers");
+	scanf("%d%d",&a,&b); 
+	swap(a,b); // function call here
 } // main ends here
 
-int swap(){
-	int a,b,c;
-	printf("Enter two numbers");
-	scanf("%d%d",&a,&b);
-	c=a;
-	a=b;
-	b=c;
-	printf("Swapping of 2 numbers is:\n%d\n%d",a,b);	
+void swap(int no1,int no2){
+	int c;
+	c=no1;
+	no1=no2;
+	no2=c;
+	printf("Swapping of 2 numbers is:\n%d\n%d",no1,no2);	
 } // function defination here 
