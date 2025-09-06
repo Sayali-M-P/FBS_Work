@@ -1,19 +1,17 @@
 #include<stdio.h>
-int leapyear(); // function declaration here
+void leapyear(); // function declaration here
 int main(){
-	int res=leapyear();	 // function call here
-	if(res==1)
-		printf("Year is Leap");
-	else
-		printf("Year is not Leap");
-} // main ends here
-
-int leapyear(){
 	int year;
 	printf("Enter a year");
 	scanf("%d",&year);
-	if(year%4==0 && year%100!=0 || year%400==0)
-		return 1;
+	leapyear(year);	 // function call here
+
+} // main ends here
+
+void leapyear(int Y){
+	
+	if(Y%4==0 && Y%100!=0 || Y%400==0)
+		printf("Year is Leap");
 	else
-		return 0;
+		printf("Year is not Leap");
 } // function defination here
