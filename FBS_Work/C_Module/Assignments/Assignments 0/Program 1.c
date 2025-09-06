@@ -1,17 +1,15 @@
 #include<stdio.h>
-int sum();
+int sum(int,int); // function declaration here
 void main(){
-	int result;
-	result=sum();
-	printf("Sum is:%d\n",result);
-}
-
-int sum(){
 	int no1,no2;
-	printf("Enter a number");
+	printf("Enter two number");
 	scanf("%d%d",&no1,&no2);
-	return no1+no2;
-	
+	sum(no1,no2); // function call here		
+} // main ends here
+
+int sum(int a, int b){
+	int result=a+b;
+	printf("Sum is:%d\n",result); // function defination here
 }
 
 
