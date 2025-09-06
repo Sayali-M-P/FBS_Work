@@ -1,14 +1,14 @@
 #include<stdio.h>
-float traingle(); // function declaration here
+void traingle(float,float); // function declaration here
 void main(){
-	float area;
-	area=traingle(); // function call here
-	printf("area of traingle:%.2f\n",area);
-} // main ends here
-
-float traingle(){
-		float base,height,area;
+	float base,height;
 	printf("Enter base and height ");
 	scanf("%f%f",&base,&height);
-	return 0.5*base*height; // function defination here	
+	traingle(base,height); // function call here
+
+} // main ends here
+
+void traingle(float a, float b){
+	 float area=0.5*a*b; // function defination here
+	printf("area of traingle:%.2f\n",area);	
 }
