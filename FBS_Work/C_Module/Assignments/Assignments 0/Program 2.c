@@ -1,16 +1,14 @@
+
 #include<stdio.h>
-float area(); // function declaration
+void cir(double); // function declaration
 void main(){
-	float a;
-	a=area(); //function call here
-	printf("%.2f",a);
+	double rad;
+	printf("Enter radius");
+	scanf("%lf",&rad);
+	cir(rad); //function call here
 } //main ends here
 
-float area(){
-		float rad;
-	printf("Enter a radius");
-	scanf("%f",&rad);
-	return 3.14*rad*rad;
-	
+void	cir(double x){
+		int res=3.14*x*x;
+		printf("%d",res);	
 } //function defination here
-
