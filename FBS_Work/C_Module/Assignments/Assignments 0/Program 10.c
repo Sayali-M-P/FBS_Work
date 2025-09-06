@@ -1,28 +1,29 @@
 #include <stdio.h>
-int total; // global variable
+
 
 // Function declarations
-int T_marks();
-int T_per();
+void T_marks(int,int,int,int,int);
+void T_per(int);
 
 int main() {
-    int per;
-
-    total = T_marks();  
-    per = T_per();   // function call here   
-
-    printf("Total Marks: %d\n", total);
-    printf("Percentage: %d%%\n", per);
-} // main ends here
-
-int T_marks() {
-    int s1, s2, s3, s4, s5;
+	int s1, s2, s3, s4, s5,total;
     printf("Enter marks of 5 subjects: ");
     scanf("%d%d%d%d%d", &s1, &s2, &s3, &s4, &s5);
-    return s1 + s2 + s3 + s4 + s5; // function defination here
+     T_marks(s1,s2,s3,s4,s5);  
+     // function call here   
+
+    
+    
+} // main ends here
+
+void T_marks(int a,int b,int c,int d,int e) {
+    int total=a + b + c + d + e; // function defination here
+    printf("Total Marks: %d\n", total);
+     T_per(total);  
 }
 
 
-int T_per() {
-    return total / 5;  
+void  T_per(int total) {
+    int per= total / 5; 
+	printf("Percentage: %d%%\n", per); 
 }
