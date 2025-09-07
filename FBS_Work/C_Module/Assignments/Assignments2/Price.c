@@ -1,37 +1,33 @@
 #include<stdio.h>
-int price(); // function declaration here 
+void price(int,char,float); // function declaration here 
 int main(){
-    price(); // function call here 
-    return 0;
-} // main ends here
- 
-int price(){
-	int price;
+	int prices;
     char isStudent;
     float discount;
-
     printf("Enter price: ");
-    scanf("%d", &price);
-
+    scanf("%d", &prices);
     printf("Are you a student? (y/n): ");
     scanf(" %c", &isStudent);  
-
-    if (isStudent == 'y') {
-        if (price > 500) {
-            discount = price * 0.20;
+    price(prices,isStudent,discount); // function call here 
+} // main ends here
+ 
+void price(int P,char isSt,float ds){
+	
+    if (isSt == 'y') {
+        if (P > 500) {
+            ds = P * 0.20;
         } else {
-            discount = price * 0.10;
+            ds = P * 0.10;
         }
     } else {
-        if (price > 600) {
-            discount = price * 0.15;
+        if (P > 600) {
+            ds = P * 0.15;
         } else {
-            discount = 0;
+            ds = 0;
         }
     }
 
-    printf("Discount: %.2f\n", discount);
-    printf("Final price: %.2f\n", price - discount);
-	return 0;
+    printf("Discount: %.2f\n", ds);
+    printf("Final price: %.2f\n", P - ds);
 } // function defination here
 
