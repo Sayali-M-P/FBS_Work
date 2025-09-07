@@ -1,19 +1,16 @@
 #include<stdio.h>
-int age(); // function declaration here
+void age(int); // function declaration here
 int main(){
-	int check=age(); // function call here
-	if(check==1)
+	int ages;
+	printf("Enter your age:");
+	scanf("%d",&ages);
+	age(ages); // function call here
+	
+} // main ends here
+
+void age(int a){
+	if(a>18)
 		printf("Eligible for vote");
 	else
 		printf("Not eligible for vote");
-} // main ends here
-
-int age(){
-	int age;
-	printf("Enter your age:");
-	scanf("%d",&age);
-	if(age>18)
-		return 1;
-	else
-		return 0;
 } // function defination here
