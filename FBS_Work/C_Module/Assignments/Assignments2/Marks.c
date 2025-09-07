@@ -1,34 +1,33 @@
 #include<stdio.h>
-int marks(); // function declaration here
+void marks(int); // function declaration here
 int main(){
-	marks(); // function call here
-	return 0;
+	int mark;
+	printf("Enter a marks");
+	scanf("%d",&mark);
+	marks(mark); // function call here
 } // main ends here
 
-int marks(){
-	int marks;
-	printf("Enter a marks");
-	scanf("%d",&marks);
-	if(marks>55){
-		if(marks>75){
-			printf("Distinction %d\n");
+void marks(int mk){
+	if(mk>55){
+		if(mk>75){
+			printf("Distinction ");
 		}
 		else{
-			if(marks>65){
-				printf("First class %d\n");
+			if(mk>65){
+				printf("First class");
 			}
 			else{
-				printf("Second class %d\n");
+				printf("Second class");
 			}
 		}
 	}	
 	else{
-		if(marks>=40){
-			printf("Pass class %d\n");
+		if(mk>=40){
+			printf("Pass class");
 		}
 		else{
 			printf("Fail");
 		}
 	}
-	return 0;
+
 } // function defination here
