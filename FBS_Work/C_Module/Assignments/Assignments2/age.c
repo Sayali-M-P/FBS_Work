@@ -1,29 +1,27 @@
 #include<stdio.h>
-int age(); // function declaration here
+void age(int); // function declaration here
 int main(){
-	age(); // function call here
-	return 0;	
+	int ages;
+	printf("Enter age");
+	scanf("%d",&ages);
+	age(ages); // function call here	
 } // main ends here
 
-int age(){
-		int age;
-	printf("Enter age");
-	scanf("%d",&age);
-	if(age<12){
-		printf("Child %d");
+void age(int a){	
+	if(a<12){
+		printf("Child");
 	}
 	else{
-		if(age<=19){
-			printf("Teenager %d");
+		if(a<=19){
+			printf("Teenager");
 		}
 		else{
-			if(age<=59){
-				printf("Adulat %d");
+			if(a<=59){
+				printf("Adulat");
 			}
 			else{
-				printf("senior %d");
+				printf("senior");
 			}
 		}
 	}
-	return 0;
 } // function defination here
