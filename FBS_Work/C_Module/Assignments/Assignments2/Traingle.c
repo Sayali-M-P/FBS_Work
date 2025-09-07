@@ -1,24 +1,24 @@
 #include<stdio.h>
-int traingle(); // function declaration here
+void traingle(int, int,int); // function declaration here
 int main() {
-    traingle(); // function call here
-    return 0;
-} // main ends here
-
-int traingle(){
 	int a, b, c;
 	printf("Enter 3 sides");
     scanf("%d%d%d", &a, &b, &c);
+    traingle(a,b,c); // function call here
+} // main ends here
 
-    if (a + b > c && b + c > a && a + c > b) {
-        if (a == b) {
-            if (b == c) {
+void traingle(int x,int y,int z){
+	
+
+    if (x + y > z && y + z > x && x + z > y) {
+        if (x == y) {
+            if (y == z) {
                 printf("Triangle is Equilateral\n");
             } else {
                 printf("Triangle is Isosceles\n");
             }
         } else {
-            if (b == c || a == c) {
+        if (y == z || x == z) {
                 printf("Triangle is Isosceles\n");
             } else {
                 printf("Triangle is Scalene\n");
@@ -27,5 +27,5 @@ int traingle(){
     } else {
         printf("Not a valid triangle\n");
     }
-	return 0;
+	
 } // function defination here
